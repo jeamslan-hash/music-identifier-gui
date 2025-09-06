@@ -8,14 +8,17 @@ on:
 jobs:
   build-win:
     runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - run: pip install -r requirements.txt
-      - run: pyinstaller --onefile --windowed music_identifier_gui.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Music-Identifier-Windows
-          path: dist/music_identifier_gui.exe
+   steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-python@v4
+    with:
+      python-version: "3.10"
+  - run: pip install -r requirements.txt
+  - run: pip install pyinstaller
+  - run: pyinstaller --onefile --windowed music_identifier_gui.py
+  - uses: actions/upload-artifact@v4
+    with:
+      name: Music-Identifier-Windows
+      path: dist/music_identifier_gui.exe
+ - run: pip install pyinstaller  # Ajoute pyinstaller pou build
+ - Fix: ajoute pyinstaller
