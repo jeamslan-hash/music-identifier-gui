@@ -14,7 +14,7 @@ Aplikasyon Desktop pou idantifye mizik k ap jwe sou laptop ou. Li itilize mikwo 
 pip install -r requirements.txt
 ```
 
-2. Kouri app la:
+2. Kouri app la :
 ```
 python music_identifier_gui.py
 ```
